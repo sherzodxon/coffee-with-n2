@@ -1,0 +1,17 @@
+.nav__list{
+    display: flex;
+}
+.nav__item{
+    margin-right: 33px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.nav__item-link{
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.92px;
+text-transform: uppercase;
+color: $grey;
+}
