@@ -378,21 +378,71 @@ a {
 }
 
 .container {
-  width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 85px;
+  padding: 0 80px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding: 0px 55px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .container {
+    padding: 0px 24px;
+  }
+}
 .header {
   padding: 43px 0;
+  z-index: 9;
 }
 .header__container {
-  padding: 0px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+@media only screen and (max-width: 620px) {
+  .header {
+    padding: 32px 0;
+  }
+  .header__nav {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding-top: 40px;
+    left: 0;
+    top: -100%;
+    height: calc(100vh - 93px);
+    transition: 500ms ease all;
+    background: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+  }
+  .header__nav .header__nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__nav .header__nav-item {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  .header__nav .header__nav-link {
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: #333D4B;
+  }
+  .header__nav-mobile {
+    top: 93px;
+  }
+}
 .nav__list {
   display: flex;
 }
@@ -411,4 +461,106 @@ a {
   letter-spacing: 0.92px;
   text-transform: uppercase;
   color: #83888F;
+}
+
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hamburger--close {
+  width: 16px;
+  height: 15px;
+  background-image: url(../../img/closed.png);
+}
+
+.hamburger--opened {
+  width: 14px;
+  height: 13px;
+  background-image: url(../../img/opened.png);
+}
+
+@media only screen and (max-width: 620px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+.create-link {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #FEFCF7;
+  padding: 15px 31px;
+  background-color: #0E8784;
+  border-radius: 6px;
+  transition: 300ms ease all;
+}
+.create-link:hover {
+  background: #66D2CF;
+}
+.create-link:disabled {
+  background: #E2DEDB;
+}
+
+.intro {
+  color: #FEFCF7;
+}
+.intro__content {
+  padding: 117px 85px;
+  background-image: url(../../img/home-intro.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 10px;
+}
+.intro__slogan {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: 0px;
+  max-width: 493px;
+  margin-bottom: 32px;
+}
+.intro__text {
+  line-height: 26px;
+  margin-bottom: 71px;
+  max-width: 445px;
+}
+
+@media only screen and (max-width: 768px) {
+  .intro__content {
+    padding: 104px 58px;
+  }
+  .intro__slogan {
+    font-size: 48px;
+    line-height: 48px;
+    max-width: 329px;
+  }
+  .intro__text {
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 398px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .intro__content {
+    padding: 100px 24px;
+    text-align: center;
+  }
+  .intro__slogan {
+    font-size: 40px;
+    line-height: 40px;
+    max-width: 100%;
+  }
+  .intro__text {
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

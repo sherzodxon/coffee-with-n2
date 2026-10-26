@@ -1,0 +1,16 @@
+.create-link{
+    @include fraunces(18px,25px);
+    color:$light-cream;
+    padding: 15px 31px;
+    background-color: $dark-cyan;
+    border-radius: 6px;
+    transition: 300ms ease all;
+    &:hover{
+        background: #66D2CF;
+
+    }
+    &:disabled{
+        background: #E2DEDB;
+
+    }
+}

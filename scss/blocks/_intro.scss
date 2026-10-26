@@ -1,0 +1,55 @@
+.intro{
+    color: $light-cream;
+    &__content{
+        padding: 117px 85px;
+        background-image: url(../../img/home-intro.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 10px
+        }
+    &__slogan{
+        @include fraunces(72px,72px);
+        max-width: 493px;
+        margin-bottom: 32px;
+    }
+    &__text{
+        line-height: 26px;
+        margin-bottom: 71px;
+        max-width: 445px;
+    }
+}
+@media only screen and (max-width:$tablet){
+    .intro{
+        &__content{
+            padding: 104px 58px;
+        }
+        &__slogan{
+            font-size: 48px;
+            line-height: 48px;
+            max-width: 329px;
+        }
+        &__text{
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 398px;
+        }
+    }
+}
+@media only screen and (max-width:$mobile){
+.intro{
+        &__content{
+            padding: 100px 24px;
+            text-align: center  ;
+        }
+        &__slogan{
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 100%;
+        }
+        &__text{
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 100%;
+        }
+    }
+}
