@@ -1,4 +1,8 @@
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
     padding: 43px 0;
     z-index: 9;
     &__container {
@@ -20,7 +24,7 @@
         width: 100%;
         padding-top: 40px;
         left: 0;
-        top: -100%;
+        top: -100vh;
         height: calc(100vh - 93px);
         transition: 500ms ease all;
         background: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);

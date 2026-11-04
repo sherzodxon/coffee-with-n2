@@ -1,5 +1,6 @@
 .intro{
     color: $light-cream;
+    margin-top: 116px;
     &__content{
         padding: 117px 85px;
         background-image: url(../../img/home-intro.jpg);
@@ -37,6 +38,7 @@
 }
 @media only screen and (max-width:$mobile){
 .intro{
+    margin-top: 93px;
         &__content{
             padding: 100px 24px;
             text-align: center  ;

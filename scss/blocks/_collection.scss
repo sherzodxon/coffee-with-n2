@@ -1,0 +1,131 @@
+.collection {
+    margin-top: 136px;
+    margin-bottom: 200px;
+
+    &__container {
+        padding: 0 165px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        z-index: 8;
+    }
+
+    &__item {
+        max-width: 255px;
+        text-align: center;
+
+    }
+    &__item-body{
+        margin-top: 71px;
+    }
+
+    &__item-title {
+        @include fraunces(24px, 32px);
+        margin-bottom: 24px
+    }
+
+    &__title {
+        text-align: center;
+        @include fraunces(150px, 150px);
+        background-color: $grey;
+        background-image: linear-gradient(180deg, rgba(252, 252, 251, 0) 0%, #f9f9f9 100%);
+        background-clip: text;
+        color: transparent;
+        height: 1.5;
+        opacity: 0.5;
+        margin-bottom: -70px;
+        z-index: -2;
+        padding: 0 80px;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .collection__title {
+        font-size: 130px;
+        line-height: 130px;
+    }
+
+    .collection__list {
+        flex-wrap: wrap;
+    }
+
+    .collection__item {
+        margin-bottom: 32px;
+    }
+
+}
+
+@media only screen and (max-width:1085px) {
+    .collection__title {
+        font-size: 110px;
+        line-height: 110px;
+
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .collection__title {
+        padding: 0px 55px;
+    }
+}
+
+@media only screen and (max-width:893px){
+    .collection__title{
+        font-size: 96px;
+        line-height: 72px;
+    }
+}
+
+@media only screen and (max-width:841px){
+    .collection__item{
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+    }
+    .collection__item-body{
+        margin-top: 0;
+        max-width: 282px;
+        text-align: left;
+    }
+}
+@media only screen and (max-width:$tablet){
+    .collection__title{
+        font-size: 90px;
+        margin-bottom: -30px;
+    }
+    .collection__container{
+        padding: 0px 97px;
+    }
+}
+@media only screen and (max-width:750px){
+    .collection__title{
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width:$mobile){
+    .collection__title{
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .collection__container{
+        padding: 0px 24px;
+      }
+      .collection__list{
+        align-items: center;
+        width: 100%;
+      }
+      .collection__item{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+      }
+      .collection__item-body{
+        text-align: center;
+      }
+}
