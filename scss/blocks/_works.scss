@@ -1,0 +1,115 @@
+.works {
+    margin-bottom: 200px;
+}
+
+.works__title {
+    @include fraunces(24px, 32px);
+    color: $grey;
+    margin-bottom: 80px;
+}
+
+.works__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    position: relative;
+    &::after{
+        position: absolute;
+        width: calc(100% - 285px);
+        height: 1px;
+        left: 15px;
+        top: 15px;
+        background-color: $pele-orange;
+        content: '';
+    }
+}
+
+.works__item {
+    max-width: 285px;
+    padding-top: 208px;
+    position: relative;
+    &::before{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid $dark-cyan;
+        left: 0;
+        top: 0;
+        content: '';
+        z-index: 1  ;
+        background-color: #fff;
+    }
+    &::after{
+        position: absolute;
+        top: 98px;
+        left: 0;
+        width: 100px;
+        height: 72px;
+        @include fraunces(72px,72px);
+        content: '01';
+        color: $pele-orange
+    }
+    &:nth-child(2){
+        &::after{
+            content: '02'
+        }
+    }
+     &:nth-child(3){
+        &::after{
+            content: '03'
+        }
+    }
+}
+
+.works__item-title {
+    @include fraunces(32px, 36px);
+    max-width: 255px;
+    margin-bottom: 42px;
+}
+
+.works__item-text {
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+@media only screen and (max-width:980px){
+    .works__item{
+        max-width: 220px;
+    }
+    .works__list{
+        &::after{
+            width: calc(100% - 220px);
+        }
+    }
+}
+@media only screen and (max-width:745px){
+    .works{
+        text-align: center;
+    }
+    .works__list{
+        flex-direction: column;
+        &::after{
+            display: none;
+        }
+
+    }
+    .works__item{
+        padding-top: 98px;
+        margin-bottom: 56px;
+        max-width: 100%;
+        &::before{
+            display: none;
+        }
+        &::after{
+            top: 0;
+            left: calc(50% - 50px);
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .works__item-title{
+        max-width: 100%;
+    }
+}
